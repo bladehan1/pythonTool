@@ -22,7 +22,7 @@ class TrafficCollector:
         self.data_queue = Queue(maxsize=10000)
         self.writers = {}
         self.lock = threading.Lock()
-        self.flush_interval = 1  # 10秒刷新一次
+        self.flush_interval = 10  # 10秒刷新一次
         # 创建输出目录
         os.makedirs(output_dir, exist_ok=True)
         
